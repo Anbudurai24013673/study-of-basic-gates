@@ -63,17 +63,48 @@ Y= A⊕B
 
 
 **PROGRAM**
+```
+GATE LEVEL MODEL:
+module log_gat(a,b,c1,c2,c3,c4,c5,c6,c7);
+input a,b;
+output c1,c2,c3,c4,c5,c6,c7;
+not g1(c1,a);
+and g2(c2,a,b);
+or g3(c3,a,b);
+nand g4(c4,a,b);
+nor g5(c5,a,b);
+xor g6(c6,a,b);
+xnor g7(c7,a,b);
+endmodule
 
+ DATA FLOW MODEL:
+module logic_gates(a, b, c1, c2, c3, c4, c5, c6, c7);
+    input a, b;
+    output c1, c2, c3, c4, c5, c6, c7;
+    assign c1 = ~a;
+    assign c2 = a & b;
+    assign c3 = a | b;
+    assign c4 = ~(a & b);
+    assign c5 = ~(a | b);
+    assign c6 = a ^ b;
+    assign c7 = ~(a ^ b);
+endmodule
+
+```
 Program for logic gates and verify its truth table in quartus using Verilog programming
 
- Developed by: RegisterNumber: 
+ Developed by: RegisterNumber: 24013673
  
 **Logic symbol & Truthtable**
+![WhatsApp Image 2024-12-03 at 13 39 54_e2ab51bc](https://github.com/user-attachments/assets/b43528aa-dee8-4e02-bd78-37da85bbdc02)
 
 **RTL realization Output:** 
+![WhatsApp Image 2024-12-03 at 13 39 57_f6f39bf3](https://github.com/user-attachments/assets/83aa5e2e-92b7-43cb-ac45-29a5e4b2b1ce)
 
 **RTL**
+![WhatsApp Image 2024-12-03 at 13 39 57_f6f39bf3](https://github.com/user-attachments/assets/3eff6546-1331-4736-aecb-ee0b39b0bfe1)
 
 **Result:**
 
-
+Thus the different digital IC's are studied and truthtablefor different logic
+ gates are verified
